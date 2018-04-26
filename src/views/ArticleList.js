@@ -2,7 +2,7 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:56:47
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-26 16:37:19
+* @Last Modified time: 2018-04-27 00:26:05
 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -11,22 +11,8 @@ import getArticles from '../api';
 import './articleList.css';
 
 class ArticleList extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     articles: [],
-  //   };
-  // }
-
   componentDidMount() {
     getArticles();
-    // return fetch('https://jsonplaceholder.typicode.com/posts')
-    //   .then(response => response.json())
-    //   .then((posts) => {
-    //     this.setState({
-    //       articles: posts,
-    //     });
-    //   });
   }
 
   render() {
@@ -68,9 +54,8 @@ class ArticleList extends Component {
 }
 
 const mapStateToProps = (store) => {
-  return {
-    articles: store.articles,
-  };
+  return { articles: store.articles };
 };
 
 export default connect(mapStateToProps)(ArticleList);
+// export default ArticleList;

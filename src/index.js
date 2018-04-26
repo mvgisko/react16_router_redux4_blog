@@ -17,9 +17,9 @@ render(
     <Router history={history}>
       <App>
         <Switch>
-          <Route exact path="/articles" component={ArticleList} />
-          <Route path="/articles/:key" component={Article} />
-          <Redirect to="/articles" />
+          <Route path="/articles" component={ArticleList} />
+          <Route path="/articles/:id" component={Article} />
+          <Route exact path="/" render={() => (<Redirect to="/articles" />)} />
         </Switch>
       </App>
     </Router>
