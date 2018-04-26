@@ -1,0 +1,43 @@
+/*
+* @Author: Gisko Maksim
+* @Date:   2018-04-21 19:26:33
+* @Last Modified by:   Gisko Maksim
+* @Last Modified time: 2018-04-25 00:30:50
+*/
+.Items__nav {
+  position: relative;
+  padding: 6px;
+
+  line-height: 18px;
+  vertical-align: middle;
+
+  background-color: #7e99ad;
+}
+
+.Items__list {
+  list-style: none;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word; 
+}
+
+.ListItem {
+  padding: 5px 6px;
+  /*margin-bottom: 16px;*/
+
+  border-bottom: 1px solid #eee;
+}
+
+.Item__title {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.Item__meta {
+  color: #666;
+}
+
+.Item__author .author {
+  font-weight: bold;
+}

@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "arrow-body-style": ["error", "as-needed"],
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    "max-len": [ 0, 120, 4, {
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\(" 
+    }],
+    "object-curly-newline": ["error", {
+      "multiline": true, "minProperties": 3
+    }],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "hrefLeft", "hrefRight", "to" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }],
+    "function-paren-newline": ["error", "consistent"]
+  }
+}
