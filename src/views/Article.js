@@ -2,22 +2,26 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:55:34
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-27 16:31:31
+* @Last Modified time: 2018-04-28 00:57:28
 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Spinner from '../Spinner';
 import { getArticle } from '../api';
 import './article.css';
 
-// const Article = ({ articles, match }) => {
 class Article extends Component {
   componentDidMount() {
     getArticle(this.props.match.params.id);
   }
 
   render() {
-    const { title, body, userId, date } = this.props.article;
+    const { article } = this.props;
+    const { title, body, userId, date } = article;
+
+    if (article.loading) return <Spinner />;
+
     return (
       <div className="Item">
         <Link to="/articles">Back</Link>

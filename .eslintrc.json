@@ -29,7 +29,7 @@
       "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\(" 
     }],
     "object-curly-newline": ["error", {
-      "multiline": true, "minProperties": 3
+      "multiline": true, "minProperties": 4
     }],
     "jsx-a11y/anchor-is-valid": [ "error", {
       "components": [ "Link" ],

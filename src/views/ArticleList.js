@@ -2,12 +2,12 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:56:47
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-27 17:41:41
+* @Last Modified time: 2018-04-27 23:46:44
 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Spinner from '../components/Spinner';
+import Spinner from '../Spinner';
 import { getArticles } from '../api';
 import './articleList.css';
 
@@ -19,8 +19,7 @@ class ArticleList extends Component {
   render() {
     const { articles } = this.props;
 
-    // if (articles.loading) return spinner;
-    return (<Spinner />);
+    if (articles.loading) return <Spinner />;
 
     return (
       <div className="Items">

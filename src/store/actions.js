@@ -2,15 +2,22 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-25 19:05:55
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-27 15:36:50
+* @Last Modified time: 2018-04-28 00:55:03
 */
 const GET_ARTICLES_SUCCESS = 'GET_ARTICLES_SUCCESS';
+const GET_ARTICLES_LOADING = 'GET_ARTICLES_LOADING';
 const GET_ARTICLE_SUCCESS = 'GET_ARTICLE_SUCCESS';
-const GET_ARTICLES_FAILED = 'GET_ARTICLES_FAILED';
+const GET_ARTICLE_LOADING = 'GET_ARTICLES_LOADING';
+
 
 export const getArticlesSuccess = articles => ({
   type: GET_ARTICLES_SUCCESS,
   articles,
+});
+
+export const getArticlesLoading = () => ({
+  type: GET_ARTICLES_LOADING,
+  loading: true,
 });
 
 export const getArticleSuccess = article => ({
@@ -18,7 +25,7 @@ export const getArticleSuccess = article => ({
   article,
 });
 
-export const getArticlesFailed = error => ({
-  type: GET_ARTICLES_FAILED,
-  error,
+export const getArticleLoading = () => ({
+  type: GET_ARTICLE_LOADING,
+  loading: true,
 });
