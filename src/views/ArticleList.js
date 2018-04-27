@@ -2,7 +2,7 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:56:47
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-27 00:26:05
+* @Last Modified time: 2018-04-27 10:42:21
 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -58,4 +58,3 @@ const mapStateToProps = (store) => {
 };
 
 export default connect(mapStateToProps)(ArticleList);
-// export default ArticleList;
