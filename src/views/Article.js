@@ -2,16 +2,16 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:55:34
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-27 10:57:05
+* @Last Modified time: 2018-04-27 12:03:24
 */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import store from '../store';
+import { connect } from 'react-redux';
 import './article.css';
 
-const Article = ({ match }) => {
-  const { articles } = store.getState();
-  const { id, title, userId, date } = articles[match.params.id];
+const Article = ({ articles, match }) => {
+  const article = articles.find((el) => match.params.id == el.id);
+  const { title, userId, date } = article;
   return (
     <div className="Item">
       <Link to="/articles">Back</Link>
@@ -31,4 +31,8 @@ const Article = ({ match }) => {
   );
 };
 
-export default Article;
+const mapStateToProps = (store) => {
+  return { articles: store.articles };
+};
+
+export default connect(mapStateToProps)(Article);
