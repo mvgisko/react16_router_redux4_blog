@@ -2,12 +2,13 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:56:47
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-27 10:42:21
+* @Last Modified time: 2018-04-27 17:41:41
 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import getArticles from '../api';
+import Spinner from '../components/Spinner';
+import { getArticles } from '../api';
 import './articleList.css';
 
 class ArticleList extends Component {
@@ -17,6 +18,10 @@ class ArticleList extends Component {
 
   render() {
     const { articles } = this.props;
+
+    // if (articles.loading) return spinner;
+    return (<Spinner />);
+
     return (
       <div className="Items">
         <div className="Items__nav">
@@ -28,7 +33,7 @@ class ArticleList extends Component {
 
         <ul className="Items__list">
           {
-            articles.map((el) => {
+            articles.data.map((el) => {
               const { id, title, userId, date, views } = el;
               return (
                 <li className="ListItem" key={id}>
