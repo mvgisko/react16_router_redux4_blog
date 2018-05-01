@@ -2,12 +2,12 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-25 19:05:55
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-28 00:55:03
+* @Last Modified time: 2018-05-01 22:03:18
 */
 const GET_ARTICLES_SUCCESS = 'GET_ARTICLES_SUCCESS';
 const GET_ARTICLES_LOADING = 'GET_ARTICLES_LOADING';
 const GET_ARTICLE_SUCCESS = 'GET_ARTICLE_SUCCESS';
-const GET_ARTICLE_LOADING = 'GET_ARTICLES_LOADING';
+const GET_ARTICLE_LOADING = 'GET_ARTICLE_LOADING';
 
 
 export const getArticlesSuccess = articles => ({

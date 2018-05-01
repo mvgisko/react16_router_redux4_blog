@@ -2,7 +2,7 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:55:34
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-04-28 00:57:28
+* @Last Modified time: 2018-05-01 22:20:21
 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -18,7 +18,7 @@ class Article extends Component {
 
   render() {
     const { article } = this.props;
-    const { title, body, userId, date } = article;
+    const { title, body, userId, date } = article.data;
 
     if (article.loading) return <Spinner />;
 
@@ -45,6 +45,7 @@ class Article extends Component {
 }
 
 const mapStateToProps = (store) => {
+  // console.log(store)
   return { article: store.article };
 };
 
