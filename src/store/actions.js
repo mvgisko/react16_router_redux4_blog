@@ -2,7 +2,7 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-25 19:05:55
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-05-03 17:17:42
+* @Last Modified time: 2018-05-03 20:31:21
 */
 const GET_ARTICLES_SUCCESS = 'GET_ARTICLES_SUCCESS';
 const GET_ARTICLES_LOADING = 'GET_ARTICLES_LOADING';

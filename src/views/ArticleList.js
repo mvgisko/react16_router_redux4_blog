@@ -2,7 +2,7 @@
 * @Author: Gisko Maksim
 * @Date:   2018-04-20 17:56:47
 * @Last Modified by:   Gisko Maksim
-* @Last Modified time: 2018-05-03 17:48:20
+* @Last Modified time: 2018-05-03 20:19:25
 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
