@@ -13,18 +13,18 @@ import registerServiceWorker from './registerServiceWorker';
 const history = createHistory();
 
 render(
-  <Provider store={store}>
-    <Router history={history}>
-      <App>
-        <Switch>
-          <Route exact path="/articles" component={ArticleList} />
-          <Route path="/articles/:id" component={Article} />
-          <Route path="/" render={() => (<Redirect to="/articles" />)} />
-        </Switch>
-      </App>
-    </Router>
-  </Provider>,
-  document.getElementById('root')
+	<Provider store={store}>
+		<Router history={history}>
+			<App>
+				<Switch>
+					<Route exact path="/articles" component={ArticleList} />
+					<Route path="/articles/:id" component={Article} />
+					<Route path="/" render={() => (<Redirect to="/articles" />)} />
+				</Switch>
+			</App>
+		</Router>
+	</Provider>,
+	document.getElementById('root')
 );
 
 registerServiceWorker();

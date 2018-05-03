@@ -14,6 +14,9 @@
   },
   "extends": "airbnb",
   "rules": {
+    "indent": [2, "tab"],
+    "react/jsx-indent": [2, "tab"],
+    "no-tabs": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "arrow-body-style": ["error", "as-needed"],
     "comma-dangle": [2, {
